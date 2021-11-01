@@ -3,7 +3,7 @@ javascript: (
         let today = new Date();
         let title = document.title;
         let url = document.location.href;
-        let note = `(参照 ${today.getFullYear()}-${('0' + (today.getMonth() + 1)).slice(-2)}-${('0' + today.getDate()).slice(-2)})`;
+        let note = `(${today.getFullYear()}年${('0' + (today.getMonth() + 1)).slice(-2)}月${('0' + today.getDate()).slice(-2)})日`;
         let bib = `@URL{label,\n  title={${title}},\n  author={},\n  note="\\url{${url}}  ${note}"\n}`;
 
         execCopy(bib);
